@@ -16,12 +16,13 @@
 			}
 
 			let highest=arr[0]
-			let secondhighest=0;
+			let secondhighest=-Infinity;
 			for(let i=0;i<len;i++){
 				if(arr[i]>highest){
 					secondhighest=highest;
 					highest=arr[i]; 
-				}else if(arr[i] > secondhighest && arr[i] < highest){
+				}
+				else if(arr[i] > secondhighest && arr[i] < highest){
 					secondhighest=arr[i];
 				}
 			}
@@ -31,7 +32,7 @@
 		function Main() {
 			var n = prompt("Enter the number of elements");
 			var arr = [];
-			for (var i = 0; i < n; i++) {
+			for (var i = 0; i < n; i++) { 
 				arr[i] = prompt("Enter element " + (i+1));
 			}
 			alert(secondHighest(arr));
